@@ -1,0 +1,8 @@
+.env
+node_modules
+.cubestore
+.cubejs-serverless.js
+.serverless
+.empty
+.serverless.yml
+upstream
