@@ -24,7 +24,7 @@ cube(`EstatisticasEmpresas`, {
       meta: {
         scope: {
           type: 'city',
-          columnType: 'ibge'
+          columnType: 'siafi'
         }
       }
     },
