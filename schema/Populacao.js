@@ -8,7 +8,7 @@ cube(`Populacao`, {
   measures: {
     total: {
       sql: `populacao`,
-      type: `count`
+      type: `sum`
     },
   },
   
