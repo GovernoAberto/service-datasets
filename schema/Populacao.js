@@ -6,7 +6,10 @@ cube(`Populacao`, {
   },
   
   measures: {
-    
+    total: {
+      sql: `populacao`,
+      type: `sum`
+    },
   },
   
   dimensions: {
