@@ -1,4 +1,5 @@
 cube(`EstatisticasEmpresas`, {
+  title: "Estatisticas de Empresas Brasileiras",
   sql: `SELECT * FROM public.estatisticas_empresas`,
   
   joins: {
@@ -6,6 +7,9 @@ cube(`EstatisticasEmpresas`, {
   },
   
   measures: {
+    count: {
+      type: `count`
+    },
     total: {
       title: "Total",
       sql: `total`,
@@ -16,7 +20,13 @@ cube(`EstatisticasEmpresas`, {
   dimensions: {
     codigoMunicipio: {
       sql: `codigo_municipio`,
-      type: `number`
+      type: `number`,
+      meta: {
+        scope: {
+          type: 'city',
+          columnType: 'ibge'
+        }
+      }
     },
 
     situacaoCadastral: {

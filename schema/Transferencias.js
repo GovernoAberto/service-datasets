@@ -27,7 +27,13 @@ cube(`Transferencias`, {
 
     codigo_municipio: {
       sql: `codigo_municipio`,
-      type: `number`
+      type: `number`,
+      meta: {
+        scope: {
+          type: 'city',
+          columnType: 'ibge'
+        }
+      }
     },
 
     tipoTransferencia: {

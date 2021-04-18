@@ -22,9 +22,15 @@ cube(`Frota`, {
   },
   
   dimensions: {
-    codigoIBGE: {
+    codigoIbge: {
       sql: `codigo_ibge`,
-      type: `number`
+      type: `number`,
+      meta: {
+        scope: {
+          type: 'city',
+          columnType: 'ibge'
+        }
+      }
     },
 
     mes: {

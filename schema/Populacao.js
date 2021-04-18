@@ -8,14 +8,20 @@ cube(`Populacao`, {
   measures: {
     total: {
       sql: `populacao`,
-      type: `sum`
+      type: `count`
     },
   },
   
   dimensions: {
     codigoIbge: {
       sql: `codigo_ibge`,
-      type: `number`
+      type: `number`,
+      meta: {
+        scope: {
+          type: 'city',
+          columnType: 'ibge'
+        }
+      }
     },
     populacao: {
       sql: `populacao`,

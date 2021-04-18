@@ -12,7 +12,13 @@ cube(`AreasMunicipios`, {
   dimensions: {
     codigoIbge: {
       sql: `codigo_ibge`,
-      type: `number`
+      type: `number`,
+      meta: {
+        scope: {
+          type: 'city',
+          columnType: 'ibge'
+        }
+      }
     },
     area: {
       sql: `area`,
