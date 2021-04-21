@@ -25,22 +25,31 @@ cube(`Nascimentos`, {
       }
     },
 
+    quantidade: {
+      title: "Quantidade",
+      sql: `total`,
+      type: `number`,
+      meta: {
+        public: true
+      }
+    },
+
     mes: {
       title: "Mês",
       sql: `extract(month from inicio)`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
 
     ano: {
       title: "Ano",
       sql: `extract(year from inicio)`,
-      type: `number`
-    },
-    
-    quantidade: {
-      title: "Quantidade",
-      sql: `total`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     }
   },
   
