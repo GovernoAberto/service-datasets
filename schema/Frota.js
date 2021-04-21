@@ -46,7 +46,24 @@ cube(`Frota`, {
     tipo: {
       sql: `tipo`,
       type: `string`
-    }
+    },
+
+    tipoReduzido: {
+      sql: `CASE 
+        WHEN tipo = 'AUTOMOVEL' THEN 'AUTOMOVEL' 
+        WHEN tipo = 'MOTOCICLETA' THEN 'MOTOCICLETA'
+        WHEN tipo = 'MOTONETA' THEN 'MOTONETA'
+        WHEN tipo = 'CAMINHONETE' THEN 'CAMINHONETE'
+        WHEN tipo = 'CAMINHAO' THEN 'CAMINHAO'
+        WHEN tipo = 'ONIBUS' THEN 'ONIBUS'
+        ELSE 'OUTROS' END`,
+      type: `string`
+    },
+
+    quantidade: {
+      sql: `quantidade`,
+      type: `number`,
+    },
   },
   
   dataSource: `default`

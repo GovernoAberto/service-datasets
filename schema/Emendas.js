@@ -18,16 +18,16 @@ cube(`Emendas`, {
       sql: `ano`,
       type: `number`
     },
+    nomeAutor: {
+      sql: `nome_autor`,
+      type: `string`
+    },
     nomeFuncao: {
       sql: `nome_funcao`,
       type: `string`
     },
     nomeSubfuncao: {
       sql: `nome_subfuncao`,
-      type: `string`
-    },
-    nomeAutor: {
-      sql: `nome_autor`,
       type: `string`
     },
     valorEmpenhado: {
