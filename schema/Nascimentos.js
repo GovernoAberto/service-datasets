@@ -1,5 +1,5 @@
 cube(`Nascimentos`, {
-  sql: `SELECT * FROM public.registro_civil where tipo_registro = 'nascimento'`,
+  sql: `SELECT * FROM public.registrocivil where tipo = 'birth'`,
   
   joins: {
     
