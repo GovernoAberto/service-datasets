@@ -18,6 +18,14 @@ cube(`EstatisticasEmpresas`, {
   },
   
   dimensions: {
+    quantidade: {
+      sql: `total`,
+      type: `number`,
+      meta: {
+        public: true
+      }
+    },
+
     codigoMunicipio: {
       sql: `codigo_municipio`,
       type: `number`,
@@ -41,22 +49,34 @@ cube(`EstatisticasEmpresas`, {
 
     opcaoPeloMei: {
       sql: `opcao_pelo_mei`,
-      type: `boolean`
+      type: `boolean`,
+      meta: {
+        public: true
+      }
     },
 
     opcaoPeloSimples: {
       sql: `opcao_pelo_simples`,
-      type: `boolean`
+      type: `boolean`,
+      meta: {
+        public: true
+      }
     },
 
     mesInicioAtividade: {
       sql: `mes_inicio_atividade`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
 
     anoInicioAtividade: {
       sql: `ano_inicio_atividade`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
 
     descricaoPorte: {
@@ -66,7 +86,10 @@ cube(`EstatisticasEmpresas`, {
         WHEN porte = 3 THEN 'Pequeno porte'
         WHEN porte = 5 THEN 'Outro'
         ELSE 'Outro' END`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
 
     descricaoSituacao: {
@@ -77,7 +100,10 @@ cube(`EstatisticasEmpresas`, {
         WHEN situacao_cadastral = 4 THEN 'Inapto'
         WHEN situacao_cadastral = 8 THEN 'Baixado'
         ELSE 'Outro' END`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
     
   },
