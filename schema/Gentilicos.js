@@ -22,7 +22,10 @@ cube(`Gentilicos`, {
     },
     nome: {
       sql: `nome`,
-      type: `string`
+      type: `string`,
+      meta: {
+        public: true
+      }
     }
   },
   

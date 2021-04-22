@@ -21,11 +21,17 @@ cube(`Prefeitos`, {
     },
     nome: {
       sql: `nome_prefeito`,
-      type: `string`
+      type: `string`,
+      meta: {
+        public: true
+      }
     },
     ano: {
       sql: `ano`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     }
   },
   

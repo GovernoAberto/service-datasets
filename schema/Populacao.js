@@ -25,11 +25,17 @@ cube(`Populacao`, {
     },
     populacao: {
       sql: `populacao`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
     ano: {
       sql: `ano`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
   },
   
