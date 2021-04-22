@@ -35,17 +35,26 @@ cube(`Frota`, {
 
     mes: {
       sql: `mes`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
 
     ano: {
       sql: `ano`,
-      type: `number`
+      type: `number`,
+      meta: {
+        public: true
+      }
     },
     
     tipo: {
       sql: `tipo`,
-      type: `string`
+      type: `string`,
+      meta: {
+        public: true
+      }
     },
 
     tipoReduzido: {
