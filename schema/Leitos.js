@@ -97,19 +97,24 @@ cube(`Leitos`, {
     },
     
     tipo: {
-      sql: `CASE 
-        WHEN tipo_leito = 'ESPEC - CLINICO' THEN 'Clínico' 
-        WHEN tipo_leito = 'ESPEC - CIRURGICO' THEN 'Cirúrgico'
-        WHEN tipo_leito = 'OBSTETRICO' THEN 'Obstétrico'
-        WHEN tipo_leito = 'PEDIATRICO' THEN 'Pediátrico'
-        WHEN tipo_leito = 'OUTRAS ESPECIALIDADES' THEN 'Outra especialidade'
-        WHEN tipo_leito = 'HOSPITAL DIA' THEN 'Hospital-dia'
-        WHEN tipo_leito = 'COMPLEMENTAR' THEN 'Complementar'
-        ELSE 'Outro' END`,
+      sql: `tipo_leito`,
       type: `string`,
       meta: {
         public: true
       }
+    },
+
+    descricaoTipo: {
+      sql: `CASE 
+      WHEN tipo_leito = 'ESPEC - CLINICO' THEN 'Clínico' 
+      WHEN tipo_leito = 'ESPEC - CIRURGICO' THEN 'Cirúrgico'
+      WHEN tipo_leito = 'OBSTETRICO' THEN 'Obstétrico'
+      WHEN tipo_leito = 'PEDIATRICO' THEN 'Pediátrico'
+      WHEN tipo_leito = 'OUTRAS ESPECIALIDADES' THEN 'Outra especialidade'
+      WHEN tipo_leito = 'HOSPITAL DIA' THEN 'Hospital-dia'
+      WHEN tipo_leito = 'COMPLEMENTAR' THEN 'Complementar'
+      ELSE 'Outro' END`,
+      type: `string`
     },
 
     total: {
