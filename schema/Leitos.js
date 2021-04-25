@@ -132,7 +132,7 @@ cube(`Leitos`, {
       }
     },
     totalPrivado: {
-      sql: `quantidade_privado`,
+      sql: `quantidade_nao_sus`,
       type: `number`,
       meta: {
         public: true
