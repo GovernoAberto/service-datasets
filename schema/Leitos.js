@@ -14,7 +14,6 @@ cube(`Leitos`, {
       ano
     FROM cnes_leitos l 
     JOIN cnes_estabelecimentos e ON(l.codigo_unidade = e.codigo_unidade)
-    JOIN ceps c on(e.cep between c.inicio_cep and c.fim_cep)
   `,
   
   joins: {

@@ -48,7 +48,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     opcaoPeloMei: {
-      sql: `opcao_pelo_mei`,
+      sql: `CASE WHEN opcao_pelo_mei is true THEN 'Sim' ELSE 'Não' END`,
       type: `boolean`,
       meta: {
         public: true
@@ -56,7 +56,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     opcaoPeloSimples: {
-      sql: `opcao_pelo_simples`,
+      sql: `CASE WHEN opcao_pelo_simples is true THEN 'Sim' ELSE 'Não' END`,
       type: `boolean`,
       meta: {
         public: true
