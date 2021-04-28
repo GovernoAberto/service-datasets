@@ -64,6 +64,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     mesInicioAtividade: {
+      title: "Mês de início",
       sql: `mes_inicio_atividade`,
       type: `number`,
       meta: {
@@ -72,6 +73,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     anoInicioAtividade: {
+      title: "Ano de início",
       sql: `ano_inicio_atividade`,
       type: `number`,
       meta: {
@@ -80,6 +82,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     descricaoPorte: {
+      title: "Porte",
       sql: `CASE 
         WHEN porte = 0 THEN 'Não Informado' 
         WHEN porte = 1 THEN 'Micro'
@@ -93,6 +96,7 @@ cube(`EstatisticasEmpresas`, {
     },
 
     descricaoSituacao: {
+      title: "Situação Cadastral",
       sql: `CASE 
         WHEN situacao_cadastral = 1 THEN 'Outro' 
         WHEN situacao_cadastral = 2 THEN 'Ativo'

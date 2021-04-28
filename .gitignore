@@ -11,3 +11,10 @@ upstream
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+aws.pem
+cubejs-serverless.js
+docker-compose.yml
+serverless.yml
+SSH.txt
+views.json

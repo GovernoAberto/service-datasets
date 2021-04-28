@@ -29,8 +29,8 @@ cube(`Leitos`, {
       sql: `quantidade_sus`,
       type: `sum`,
     },
-    quantidadePrivado: {
-      sql: `quantidade_privado`,
+    quantidadeNaoSus: {
+      sql: `quantidade_nao_sus`,
       type: `sum`,
     }
   },
@@ -64,6 +64,7 @@ cube(`Leitos`, {
     },
 
     nomeInstituicao: {
+      title: "Nome da instituição",
       sql: `nome_instituicao`,
       type: `string`,
       meta: {
@@ -72,6 +73,7 @@ cube(`Leitos`, {
     },
 
     tipoInstituicao: {
+      title: "Tipo de instituição",
       sql: `tipo_instituicao`,
       type: `string`,
       meta: {
@@ -80,7 +82,13 @@ cube(`Leitos`, {
     },
 
     tipoGestao: {
-      sql: `tipo_gestao`,
+      title: "Tipo de gestão",
+      sql: `CASE 
+      WHEN tipo_gestao = 'M' THEN 'Municipal' 
+      WHEN tipo_gestao = 'E' THEN 'Estadual'
+      WHEN tipo_gestao = 'D' THEN 'Dupla'
+      WHEN tipo_gestao = 'S' THEN 'Sem Gestão'
+      ELSE 'Outro' END`,
       type: `string`,
       meta: {
         public: true
@@ -130,7 +138,7 @@ cube(`Leitos`, {
         public: true
       }
     },
-    totalPrivado: {
+    totalNaoSus: {
       sql: `quantidade_nao_sus`,
       type: `number`,
       meta: {

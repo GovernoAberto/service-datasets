@@ -1,5 +1,5 @@
 cube(`Frota`, {
-  title: "Frota de Veículos: ",
+  title: "Frota de Veículos",
   sql: `SELECT * FROM public.frota`,
   
   joins: {
